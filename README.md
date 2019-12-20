@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install
+
+* Clone Repo with https://github.com/cerra88/react-chatBot
+* Run `npm install` command
+* Finally execute `npm start`
+* Note: By default , server is running in port 3001
 
 ## Available Scripts
 
