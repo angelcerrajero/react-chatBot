@@ -31,24 +31,24 @@ function MintyBot(props) {
            id: "Displaying options to eat",
            options: [
                       {
-                        value: "Lunch",
-                        label: "Lunch",
+                        value: "Breakfast",
+                        label: "Breakfast",
                         trigger: "Your ingredients"
                       },
                       { 
-                        value: "Breakfast",
-                        label: "Breakfast",
-                        trigger: "Breakfast Not available"
+                        value: "Lunch",
+                        label: "Lunch",
+                        trigger: "Lunch Not available"
                       } 
                     ]
         },
         {
-           id: "Breakfast Not available",
-           message: "Sorry, We don't have anything special for Breakfast. Would you like to try for Lunch?",
-           trigger: "Asking for Lunch"
+           id: "Lunch Not available",
+           message: "Sorry, We don't have anything special for Lunch. Would you like to try for Breakfast?",
+           trigger: "Asking for Breackfast"
         },
         {
-           id: "Asking for Lunch",
+           id: "Asking for Breackfast",
            options: [
                       {
                         value: true,
@@ -92,77 +92,11 @@ function MintyBot(props) {
 
         {
             id: "Your Dish with chocolate",
-            message: "The Dish of the day for you is:      cheese cake",
+            message: "The Dish of the day for you is:      chocolat cheese cake",
             trigger: "Done"
          },
  
-        {
-           id: "Adding Mushroom in Pizza",
-           options: [
-                      {
-                        value: true,
-                        label: "Yes",
-                        trigger: () => {
-                           props.eventHandler("mushroom");
-                           return "Asking for Corn in Pizza"  
-                         }
-                      },
-                      { 
-                        value: "false",
-                        label: "No",
-                        trigger: "Asking for Corn in Pizza"
-                      } 
-                    ]
-        },
-        {
-           id: "Asking for Corn in Pizza",
-           message: "Would you like to have corn in your pizza",
-           trigger: "Adding Corn in Pizza"
-        },
- 
-        {
-           id: "Adding Corn in Pizza",
-           options: [
-                      {
-                        value: true,
-                        label: "Yes",
-                        trigger: () => {
-                           props.eventHandler("corn");
-                           return "Asking for Veggies in Pizza"  
-                         }
-                      },
-                      { 
-                        value: "false",
-                        label: "No",
-                        trigger: "Asking for Veggies in Pizza"
-                      } 
-                    ]
-        },
-         
-        {
-           id: "Asking for Veggies in Pizza",
-           message: "Would you like to have veggies in your pizza",
-           trigger: "Adding Veggies in Pizza"
-        },
- 
-        {
-           id: "Adding Veggies in Pizza",
-           options: [
-                      {
-                        value: true,
-                        label: "Yes",
-                        trigger: () => {
-                           props.eventHandler("veggie");
-                           return "Done"  
-                         }
-                      },
-                      { 
-                        value: "false",
-                        label: "No",
-                        trigger: "Done"
-                      } 
-                    ]
-        },
+        
         {
             id: "Done",
             message: "Have a great day !!",
